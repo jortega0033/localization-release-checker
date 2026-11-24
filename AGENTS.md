@@ -4,9 +4,9 @@ The full repository instructions are in [CLAUDE.md](CLAUDE.md). This file repeat
 
 ## Status
 
-Nothing is implemented. The repository holds the plan (`docs/PROJECT-PLAN.md`), the delivery tooling and the backlog (epic #1). Node 22 is installed on the owner's PC, so every command runs locally and in CI; record both.
+Only the scaffold exists, with no product behaviour. The repository holds the plan (`docs/PROJECT-PLAN.md`), the delivery tooling and the backlog (epic #1). Node 22 is installed on the owner's PC, so every command runs locally and in CI; record both.
 
-## Commands (planned; the scaffold makes the first ones real)
+## Commands (real (scaffold); the checker itself is planned from #2)
 
 ```
 node --test

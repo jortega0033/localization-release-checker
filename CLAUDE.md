@@ -6,7 +6,7 @@ Working instructions for this repository. Read this file first, then the documen
 
 An offline checker for a frontend maintainer: load a source and one to three translated catalogs, find missing keys, lost variables and missing plural branches, see where a translated label overflows its place, compare the result with a saved baseline and export a report another engineer can reproduce. Static JavaScript modules, IndexedDB, a small Node server on `127.0.0.1`, no dependencies, synthetic parcel-tracking messages.
 
-**Nothing is implemented yet.** The repository holds the plan, the delivery tooling and the backlog in epic #1. Commands marked planned below do not work yet. Do not describe a planned thing as working, and do not claim a passing baseline: there is none.
+**Only the scaffold exists, with no product behaviour.** The repository holds the plan, the delivery tooling and the backlog in epic #1. Commands marked planned below do not work yet; those marked real (scaffold) run. Do not describe a planned thing as working, and do not claim a passing baseline: there is none.
 
 ## Sources of truth
 
@@ -40,8 +40,8 @@ Node 22. No install step is needed.
 
 | Purpose | Command | Status |
 |---|---|---|
-| Tests | `node --test` | planned: real with the scaffold |
-| Run the app | `node server/serve.mjs` | planned: real with the scaffold (static shell), checker from #2 |
+| Tests | `node --test` | real (scaffold) |
+| Run the app | `node server/serve.mjs` | real (scaffold: static shell); checker planned from #2 |
 
 ## Architecture boundaries
 
