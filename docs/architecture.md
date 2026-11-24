@@ -1,6 +1,6 @@
 # Implementer map
 
-Status: **planned, not implemented.** This page maps the boundaries that [PROJECT-PLAN.md](PROJECT-PLAN.md) requires onto a module layout so that parallel tickets do not collide. It adds no requirement; the plan wins where they differ. The names are the orchestrator's proposal, fixed by the scaffold; a ticket that changes one corrects this page in the same pull request.
+Status: **only the scaffold exists (stubs, static shell, smoke tests); no product behaviour.** This page maps the boundaries that [PROJECT-PLAN.md](PROJECT-PLAN.md) requires onto a module layout so that parallel tickets do not collide. It adds no requirement; the plan wins where they differ. The names are the orchestrator's proposal, fixed by the scaffold; a ticket that changes one corrects this page in the same pull request.
 
 ## Planned module map
 
@@ -12,9 +12,10 @@ Status: **planned, not implemented.** This page maps the boundaries that [PROJEC
 | Preview | `app/preview/` | Parcel card, action strip, scenarios, measurement | #4 |
 | Project store | `app/store/` | IndexedDB record, revisions, baseline, recovery | #5 |
 | Reports | `app/report/` | Comparison counts, JSON and self-contained HTML export | #5 (comparison), #6 |
-| Page | `app/ui/` | Workflow screens, filters, status, locale preflight | #2, #6 |
+| Page | `app/ui/`, `app/index.html` | Workflow screens, filters, status, locale preflight | #2 to #6 |
 | Fixtures | `app/fixtures/` | Original parcel catalogs and manifest | #2, #3, #4 |
-| Static server | `server/serve.mjs` | Loopback server with a file allowlist on a fixed port | #2 |
+| Static server | `server/serve.mjs` | Loopback server with a file allowlist on a fixed port | #2; a ticket that adds a served file extends the allowlist |
+| Documents | `docs/message-syntax.md`, `docs/verification.md` | Frozen message syntax; release evidence | #3; #7 |
 | Tests | `test/` | `node --test` for pure modules; headless Chrome runs for layout, storage and keyboard | every ticket |
 
 Dependency direction: `ui` depends on every module below it; `report` on `audit` and `store` shapes; `preview` on `message`; `audit` on `message` and `catalog`; `store` on no engine module. `catalog` and `message` import nothing from the app.
