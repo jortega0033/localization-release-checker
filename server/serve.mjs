@@ -24,7 +24,7 @@ export function createApp() {
       res.writeHead(405, { Allow: 'GET, HEAD' }).end();
       return;
     }
-    const entry = ALLOWED.get(new URL(req.url, 'http://x').pathname);
+    const entry = ALLOWED.get(req.url.split('?')[0]);
     if (!entry) {
       res.writeHead(404, { 'Content-Type': 'text/plain; charset=utf-8' }).end('Not found');
       return;

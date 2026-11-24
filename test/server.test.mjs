@@ -25,7 +25,9 @@ test('serves two files, 404 and 405, on 127.0.0.1', async () => {
     const css = await fetch(`${base}/tokens.css`);
     assert.equal(css.headers.get('content-type'), 'text/css; charset=utf-8');
     await css.arrayBuffer();
-    assert.equal((await fetch(`${base}/package.json`)).status, 404);
+    for (const path of ['/package.json', '//', '//x/tokens.css']) {
+      assert.equal((await fetch(base + path)).status, 404, path);
+    }
     assert.equal((await fetch(`${base}/`, { method: 'POST' })).status, 405);
   } finally {
     server.close();
