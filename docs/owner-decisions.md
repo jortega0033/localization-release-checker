@@ -36,3 +36,14 @@ The plan leaves these open. Each is a recommendation by the orchestrator, adopte
 | #4 | Browser test method | Headless Chrome started from `node --test` over `--remote-debugging-pipe`, no dependency; Linux CI only, skipped locally when Chrome is absent and failing in CI when it is absent. |
 | #5 | Projects | One project record per origin. |
 | none | Licence | MIT, already in the repository (`LICENSE`). No ticket changes it. |
+
+## Program decisions (owner, 2026-11-24)
+
+The owner accepted the goal and each suggestion below. They apply from the phase they name; the rules of `CLAUDE.md` hold for phase 1 as written.
+
+| Decision | Implemented in |
+|---|---|
+| The repository has a program goal above phase 1: a verification engine for translated interfaces, in 6 phases. | Program issue #39 |
+| Phase 1 uses the browser for plural rules and numbers. Suggested: keep that rule; from phase 2 the own formatter decides and the browser is the judge. | Program issue #39 |
+| Locale data, test files and fonts come from outside. Suggested: each phase checks the licence first and fetches a pinned version outside the repository. | Program issue #39 |
+| The first release refuses exact selectors, offsets and quoting. Suggested: they enter with phase 2. | Program issue #39 |

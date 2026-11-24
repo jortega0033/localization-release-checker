@@ -1,5 +1,7 @@
 # Localization Release Checker
 
+> This document specifies phase 1 of the program in [#39](https://github.com/jortega0033/localization-release-checker/issues/39). Hour figures in it are early estimates for that phase; its open tickets add up to 73 to 112 hours (2026-11-24). Work that it defers is planned in the later phases only where the program names it.
+
 Implementation plan. Product assumptions and all acceptance checks below describe proposed work.
 
 ## Product requirements
